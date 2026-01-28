@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 // do phuc tap 0(n^2)
-// tim 2 so trung nhau trong mang
+// duyet mang tim 2 phan tu bang . taget duoc nhap vao tu ban phim
 int main()
 {
     int n;
