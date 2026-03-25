@@ -1,13 +1,18 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
 int binarysearch(int a[], int x, int left, int right)
 {
     while (left <= right)
     {
         int mid = (left + right) / 2;
         if (a[mid] == x)
+        {
             return 1;
+        }
         else if (x > a[mid])
         {
+
             left = mid + 1;
         }
         else
@@ -20,29 +25,23 @@ int binarysearch(int a[], int x, int left, int right)
 
 int main()
 {
-    int n, x;
-    printf("nhap kich thuoc mang: ");
-    scanf("%d", &n);
+    int n;
+    cin >> n;
     int a[n];
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
+        cin >> a[i];
     }
-    int t; // nhap so luong can tim
-
-    scanf("%d", &t);
-    while (t--)
+    int x;
+    cin >> x;
+    int res = binarysearch(a, x, 0, n - 1);
+    if (res == 1)
     {
-        scanf("%d", &x);
-        int res = binarysearch(a, x, 0, n - 1);
-        if (res == 1)
-        {
-            printf("yes\n");
-        }
-        else
-        {
-            printf("No\n");
-        }
+        cout << "Yes" << endl;
+    }
+    else
+    {
+        cout << "No" << endl;
     }
     return 0;
 }
