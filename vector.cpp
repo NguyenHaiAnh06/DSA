@@ -42,7 +42,7 @@ int main()
     {
         cin >> it[i];
     }
-    // do phuc tap 0(n)
+    // do phuc tap 0(n), them phan tu vao vi tri
     it.insert(it.begin() + 2, 100);
     for (int x : it)
     {
