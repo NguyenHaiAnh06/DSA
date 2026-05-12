@@ -1,7 +1,6 @@
 // ss 3 tieu chi
 // ss qua kc a,b
 // so sanh qua hoanh do , neu hoanh  do bang nhau thi sort tung do
-
 #include <iostream>
 #include <algorithm>
 #include <vector>
