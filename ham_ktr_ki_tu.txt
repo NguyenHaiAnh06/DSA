@@ -1,0 +1,6 @@
+isdigt(char c) Kiểm tra chữ số
+islower(char c) kiểm tra chữ in thường
+issupper(char c) kiểm tra chữ in hoa
+isalpha(char c) kiểm tra chữ cái 
+int tolower(char c) chuyển thành chữ in thường
+int toupper(char c) chuyển thành chữ in hoa
