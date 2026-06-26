@@ -5,3 +5,4 @@ isalpha(char c) kiểm tra chữ cái
 int tolower(char c) chuyển thành chữ in thường
 int toupper(char c) chuyển thành chữ in hoa
 stoi(char c) Chuyển chuỗi số thành chữ , tách đến khi gặp chuỗi
+substr(index) cắt xâu con theo index // hàm
