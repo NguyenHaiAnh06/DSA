@@ -3,7 +3,9 @@
 // co the duyet = interration or forech
 #include <iostream>
 using namespace std;
-void inhoa(string &s)
+
+using ll = long long;
+void inhoa(string &s) // phai rai tham chieu
 {
     for (int i = 0; i < s.size(); i++)
     {
