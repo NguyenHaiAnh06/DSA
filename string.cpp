@@ -3,6 +3,13 @@
 // co the duyet = interration or forech
 #include <iostream>
 using namespace std;
+void inhoa(string &s)
+{
+    for (int i = 0; i < s.size(); i++)
+    {
+        s[i] = toupper(s[i]);
+    }
+}
 int main()
 {
     int n;
