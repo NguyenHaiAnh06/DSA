@@ -1,0 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <queue>
+#include <stack>
+#include <deque>
+#include <cmath>
+#include <numeric>
+#include <iomanip>
+#include <limits>
+
+using namespace std;
+
+#define FOR2_1(i, j, row, col)       \
+    for (int i = 1; i <= (row); ++i) \
+        for (int j = 1; j <= (col); ++j)
+using ll = long long;
+using ull = unsigned long long;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+    int q;
+    cin >> q;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = 0;
+    }
+    vector<ll> tmp(n + 1, 0);
+    for (int i = 0; i < n; i++)
+    {
+        if (i == 0)
+        {
+            tmp[i] = a[i];
+        }
+        else
+        {
+            tmp[i] = a[i] - a[i - 1];
+        }
+    }
+    while (q--)
+    {
+        int left, right;
+        cin >> left >> right;
+        left--;
+        right--;
+        int k;
+        cin >> k;
+        tmp[left] += k;
+        tmp[right + 1] -= k;
+    }
+    ll sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += tmp[i];
+        cout << sum << " ";
+    }
+
+    return 0;
+}
