@@ -1,0 +1,43 @@
+- cấu hình đầu tiên
+- Cấu hình cuối cùng
+- Phương pháp sinh
+
+// khởi tạo cấu hình đầu tiên
+while(<Khi chưa phải là cấu hình cuối cùng>){
+    <In ra cấu hình hiện tại>
+    <Sinh ra cấu hình tiếp theo>
+}
+
+test: ttsinh_genertion.cpp
+
+với n=3:
+Cấu hình ban đầu (Hàm ktao): 0 0 0
+In ra: 000
+
+Lần gọi ttsinh() thứ 1:
+Xét từ phải sang trái (i=3): Phần tử a[3] đang là 0.
+Vòng lặp while không chạy (vì điều kiện yêu cầu a[i] == 1).
+Kiểm tra if (i == 0) → Sai. Nhảy vào else: Biến đổi a[3] = 1.
+Cấu hình mới: 0 0 1 → In ra: 001
+
+
+Lần gọi ttsinh() thứ 2:
+Xét từ phải sang (i=3): Phần tử a[3] đang là 1.
+Vòng lặp while chạy: Biến a[3] thành 0, lùi sang trái (i = 2).
+Xét tiếp tại vị trí i=2: a[2] đang là 0. Vòng while dừng ngay lập tức!
+Nhảy xuống dưới, câu lệnh a[i] = 1 sẽ biến a[2] thành 1.
+Cấu hình mới: 0 1 0 → In ra: 010
+
+
+Lần gọi ttsinh() thứ 3:
+Xét từ phải sang (i=3): a[3] là 0 → Không chạy while.
+Lật ngay a[3] thành 1.
+Cấu hình mới: 0 1 1 → In ra: 011
+
+
+Lần gọi ttsinh() thứ 4 (Bước này rất hay):
+Xét từ phải sang (i=3): a[3] đang là 1 → biến thành 0, lùi về i = 2.
+Tại i=2: a[2] đang là 1 → biến thành 0, lùi về i = 1.
+Tại i=1: a[1] đang là 0 → Vòng while dừng lại!
+Câu lệnh a[i] = 1 sẽ biến a[1] thành 1.
+Cấu hình mới: 1 0 0 → In ra: 100
