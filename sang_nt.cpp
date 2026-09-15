@@ -24,28 +24,30 @@ using ll = long long;
 using ull = unsigned long long;
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
-void solve(vector<ll> v, int n, int x)
+ll n;
+void solve()
 {
+    vector<ll> v(n + 1, 1);
     for (int i = 0; i < n; i++)
     {
-        auto check = lower_bound(v.begin(), v.end(), x);
-        cout << *check << " ";
+        v[i] = 1;
+    }
+    v[0] = v[1] = 0;
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (v[i])
+        {
+            for (int j = i * i; j <= n; j += i)
+            {
+                v[j] = 0;
+            }
+        }
     }
 }
-
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n;
-    cin >> n;
-    int x;
-    cin >> x;
-    vector<ll> v(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> v[i];
-    }
-    solve(v, n, x);
+
     return 0;
 }

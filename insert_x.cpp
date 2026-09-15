@@ -14,8 +14,8 @@ int main()
         cin >> v[i];
     }
     auto it = lower_bound(v.begin(), v.end(), 7);
-    it--;
-    cout << *it << endl;
+    int index = it - v.begin();
+    cout << index << endl;
 
     return 0;
 }
